@@ -1,0 +1,9 @@
+body {
+    font-family: monospace;
+}
+.card-columns {
+    column-count: 2;
+}
+label {
+    font-weight: bolder;
+}

@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ["uses" => "HomeController@index"]);
+
+Route::get('/banks', ["uses" => "BankController@index"])->name('bank');
+Route::post('/banks', ["uses" => "BankController@fetch"]);
