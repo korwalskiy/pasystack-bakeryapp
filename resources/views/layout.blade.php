@@ -22,10 +22,10 @@
                     <h2 class="jumbotron well text-center w-100">{{ env('APP_NAME') }}</h2>
                     <div class="container">
                         @if (Session::has('flash_notification.message'))
-                        <div class="alert alert-{{ Session::get('flash_notification.level') }} alert-dismissible fade show">
+                        <div class="alert alert-{{ Session::get('flash_notification.level') }} alert-dismissible fade show" role="alert">
                             {!! Session::get('flash_notification.message') !!}
 
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         </div>
                         @endif
 
@@ -34,5 +34,7 @@
                 </div>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossorigin="anonymous"></script>
     </body>
 </html>

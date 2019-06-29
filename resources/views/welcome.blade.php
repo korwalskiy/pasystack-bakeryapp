@@ -13,7 +13,7 @@
                 <h3 class="text-center">No Customer Records Found!</h3>
             @else
                 <ul class="list-group">
-                    @foreach ($allcustomer as $ac)
+                    @foreach ($allcustomers as $ac)
                         <li class="list-group-item">{{ $ac->name }}<{{ $ac->email }}></li>
                     @endforeach
                 </ul>
