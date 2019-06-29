@@ -8,4 +8,8 @@ class Recipient extends Model
 {
     protected $table = 'recipients';
     public $guarded = ['id'];
+
+    public function customer(){
+        return $this->belongsTo('App\Customer');
+    }
 }
