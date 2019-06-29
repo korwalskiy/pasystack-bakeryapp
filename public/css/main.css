@@ -2,8 +2,14 @@ body {
     font-family: monospace;
 }
 .card-columns {
-    column-count: 2;
+    column-count: 3;
 }
 label {
     font-weight: bolder;
+}
+
+@media (max-width:767px) {
+    .card-columns {
+        column-count: 1;
+    }
 }

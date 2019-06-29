@@ -17,3 +17,6 @@ Route::get('/banks', ["uses" => "BankController@index"])->name('bank');
 Route::post('/banks', ["uses" => "BankController@fetch"]);
 
 Route::resource('customer', "CustomerController");
+
+Route::get('/transfer-settings', ["uses" => "TransferController@getSettings"])->name('settings');
+Route::post('/transfer-settings', ["uses" => "TransferController@postSettings"])->name('settings');
